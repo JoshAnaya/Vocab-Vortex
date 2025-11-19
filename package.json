@@ -1,0 +1,14 @@
+{
+  "name": "vocab-vortex",
+  "version": "1.0.0",
+  "description": "A vocabulary learning app for 4th graders",
+  "scripts": {
+    "start": "http-server . -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
