@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- iOS Style Background Container -->
+  <rect width="512" height="512" rx="110" fill="#8B5CF6"/>
+  
+  <!-- Tornado Stack (Bottom to Top) -->
+  <!-- Base -->
+  <ellipse cx="256" cy="390" rx="40" ry="15" fill="#5B21B6" opacity="0.8"/>
+  <path d="M216 390 Q256 430 296 390" stroke="#5B21B6" stroke-width="0" fill="none"/>
+  
+  <!-- Tier 4 -->
+  <ellipse cx="256" cy="360" rx="60" ry="25" fill="#6D28D9"/>
+  
+  <!-- Tier 3 -->
+  <ellipse cx="250" cy="300" rx="90" ry="35" fill="#7C3AED"/>
+  
+  <!-- Tier 2 (Face Layer) -->
+  <ellipse cx="260" cy="220" rx="120" ry="45" fill="#8B5CF6" stroke="#7C3AED" stroke-width="10"/>
+  
+  <!-- Tier 1 (Top) -->
+  <ellipse cx="256" cy="130" rx="150" ry="55" fill="#A78BFA"/>
+
+  <!-- Wind Swirls -->
+  <path d="M140 130 Q256 80 370 130" stroke="white" stroke-width="8" fill="none" opacity="0.3" stroke-linecap="round"/>
+  <path d="M180 220 Q260 190 340 220" stroke="white" stroke-width="8" fill="none" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- The Face -->
+  <!-- Eyes -->
+  <circle cx="210" cy="230" r="12" fill="white"/>
+  <circle cx="300" cy="230" r="12" fill="white"/>
+  
+  <!-- Smile -->
+  <path d="M230 260 Q255 280 280 260" stroke="white" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Highlights -->
+  <ellipse cx="320" cy="110" rx="30" ry="10" fill="white" opacity="0.4" transform="rotate(-10 320 110)"/>
+</svg>
