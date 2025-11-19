@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Vocab Vortex - Honest & Stable</title>
+    
+    <!-- PWA Manifest & Icons -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icon (Must be a PNG file named icon.png in the repo) -->
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <!-- iOS Specific Meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Vocab Vortex">
+
+    <title>Vocab Vortex</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -47,6 +61,7 @@
             min-height: 100dvh; 
             touch-action: manipulation;
             transition: background-color 0.3s ease;
+            overscroll-behavior: none; /* Prevents pull-to-refresh on mobile */
         }
 
         /* Graph Paper Background Pattern */
@@ -111,7 +126,7 @@
         }
     </style>
 </head>
-<body id="app-body" class="bg-graph flex flex-col items-center pt-4 pb-10 px-4 overflow-y-auto transition-colors duration-300">
+<body id="app-body" class="bg-graph flex flex-col items-center pt-4 pb-10 px-4 overflow-y-auto transition-colors duration-300 select-none">
 
     <canvas id="confetti-canvas"></canvas>
 
@@ -821,5 +836,3 @@
     </script>
 </body>
 </html>
-
-
