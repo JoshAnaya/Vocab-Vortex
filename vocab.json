@@ -1,0 +1,15 @@
+{
+    "title": "Week 5",
+    "words": [
+        { "word": "Opinion", "definition": "A personal judgment that someone thinks is true, but that may be true or false.", "sentence": "It is my _____ that chocolate is better than vanilla." },
+        { "word": "Moral", "definition": "A story that teaches a lesson.", "sentence": "The _____ of the fable taught us that slow and steady wins the race." },
+        { "word": "Persuade", "definition": "To talk someone into doing or believing something; convince.", "sentence": "I tried to _____ my parents to buy me a new video game." },
+        { "word": "Affix", "definition": "Can be added to the root of a word to change its meaning.", "sentence": "The prefix 'un-' is an _____ that changes 'happy' to 'unhappy'." },
+        { "word": "Structure", "definition": "The way in which things are arranged or put together.", "sentence": "We studied the _____ of the bridge to see how it was built." },
+        { "word": "Vocabulary", "definition": "A group of words that a person knows or should know.", "sentence": "Reading books every day is a great way to expand your _____." },
+        { "word": "Loyal", "definition": "Being a good and faithful friend, family member, or part of a group, no matter what happens.", "sentence": "The dog was very _____ and never left his owner's side." },
+        { "word": "Humble", "definition": "Not thinking and acting like you are better than others and giving credit to others.", "sentence": "Even though she won the contest, she remained _____ and thanked her team." },
+        { "word": "Integrity", "definition": "Doing the right thing, even when no one is watching.", "sentence": "He showed _____ by returning the money he found on the floor." },
+        { "word": "Extend", "definition": "Building upon a topic of interest to make it more difficult and to make the learning last longer.", "sentence": "The teacher asked us to _____ our science project by adding a new experiment." }
+    ]
+}
