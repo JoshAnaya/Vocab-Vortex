@@ -170,6 +170,11 @@ function setBestTime(diff, ms) {
     localStorage.setItem(`vocab_best_${diff}`, ms);
 }
 
+// --- UTIL ---
+function formatWordForDisplay(word) {
+    return word.replace(/\//g, '/<br>');
+}
+
 // --- STUDY MODE ---
 function renderStudy() {
     if (activeList.length === 0) return;
@@ -180,7 +185,7 @@ function renderStudy() {
         <div class="bg-blue-50 dark:bg-slate-800 p-6 rounded-3xl mb-4 w-full border-2 border-blue-100 dark:border-slate-700 relative group">
             
             <div class="flex justify-between items-start">
-                <h2 class="text-3xl md:text-4xl font-black text-fun-blue dark:text-blue-400 fun-font capitalize mb-2 floating">${item.word}</h2>
+                <h2 class="text-3xl md:text-4xl font-black text-fun-blue dark:text-blue-400 fun-font capitalize mb-2 floating text-left">${formatWordForDisplay(item.word)}</h2>
             </div>
 
             <div class="w-16 h-1 bg-blue-200 dark:bg-blue-900 rounded-full mb-4"></div>
@@ -317,7 +322,7 @@ function renderMultipleChoice(item, count) {
                 <button onclick="checkChoice(this, '${opt.replace(/'/g, "\\'")}')" 
                     data-word="${opt.replace(/'/g, "\\'")}"
                     class="btn-3d ${btnHeight} bg-indigo-50 dark:bg-slate-700 border-4 border-indigo-100 dark:border-slate-600 rounded-2xl text-indigo-900 dark:text-white font-black hover:border-fun-purple hover:bg-white dark:hover:bg-slate-600 transition-all flex items-center justify-center break-words text-center leading-none px-1 shadow-sm">
-                    ${opt}
+                    ${formatWordForDisplay(opt)}
                 </button>
             `).join('')}
         </div>
@@ -398,10 +403,14 @@ function checkInput() {
 
     const inputEl = document.getElementById('quiz-input');
     const diffEl = document.getElementById('diff-area');
-    const userVal = inputEl.value.trim();
+    const userVal = inputEl.value.trim().toLowerCase();
     const correctVal = activeList[quizIndex].word;
+    const correctParts = correctVal.toLowerCase().split('/');
 
-    if (userVal.toLowerCase() === correctVal.toLowerCase()) {
+    // Check if user input matches the full word OR any of the slash-separated parts
+    const isCorrect = (userVal === correctVal.toLowerCase()) || correctParts.includes(userVal);
+
+    if (isCorrect) {
         inputEl.classList.add('border-fun-green', 'bg-green-50', 'text-fun-green');
         handleResult(true, inputEl);
     } else {
